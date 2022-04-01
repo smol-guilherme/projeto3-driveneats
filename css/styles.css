@@ -47,11 +47,14 @@ ion-icon {
 }
 
 .checkout-menu {
-    display: none;
     color: white;
     font-size: 20px;
     z-index: 1;
     height: 100vh;
+}
+
+.hidden {
+    display: none;
 }
 
 .checkout-menu > div {
@@ -139,7 +142,7 @@ ion-icon {
 
 .order-item {
     margin: 10px;
-    padding: 5;
+    padding: 5px;
     max-width: min-content;
     border: none;
     border-radius: 16px;
@@ -213,12 +216,22 @@ ion-icon {
     align-items: center;
 }
 
+.order-ready {
+    background-color: #50d074;
+}
+
 .gui-highlight {
+    background-color: white;
+    color: #50d074;
     padding: 12px 0;
     font-size: 22px;
     font-weight: bold;
-    color: #50d074;
-    background-color: white;
+    border: none;
+    width: 90%;
+    border-radius: 10% / 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cancel-button {

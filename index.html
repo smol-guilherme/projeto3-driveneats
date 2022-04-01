@@ -9,7 +9,7 @@
     <title>DrivenEats</title>
 </head>
 <body>
-    <div class="checkout-menu">
+    <div class="checkout-menu hidden">
         <div>
             <h3>Confirme seu pedido</h3>
             <span class="checkout-info">
@@ -40,8 +40,8 @@
                     <span class="co-total">-price-</span>
                 </span>
             </span>
-            <button class="order-button gui-highlight">Tudo certo, pode pedir!</button>
-            <button class="cancel-button">Cancelar</button>
+            <button class="gui-highlight">Tudo certo, pode pedir!</button>
+            <button onclick="cancelOrder()" class="cancel-button">Cancelar</button>
         </div>
     </div>
     <div class="top-menu">
@@ -55,7 +55,7 @@
         <div class="order-box">
             <h2>Primeiro, seu prato</h2>
             <div class="first-order">
-                <button class="order-item">
+                <button onclick="queueOrder(this)" class="order-item">
                     <img src="./content/food_01.jpg" alt="">
                     <h5 class="item-name">Temaki de Feijão</h5>
                     <span class="item-description">Aimeudeusquehorror</span>
@@ -67,9 +67,9 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </button>
-                <button class="order-item">
+                <button onclick="queueOrder(this)" class="order-item">
                     <img src="./content/food_02.jpg" alt="">
-                    <h5 class="item-name">Temaki de Feijão</h5>
+                    <h5 class="item-name">Mac'n'Sushi</h5>
                     <span class="item-description">Aimeudeusquehorror</span>
                     <div>
                         <span>
@@ -79,7 +79,7 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </button>
-                <button class="order-item">
+                <button onclick="queueOrder(this)" class="order-item">
                     <img src="./content/food_03.jpg" alt="">
                     <h5 class="item-name">Pizza de Sushi</h5>
                     <span class="item-description">Aimeudeusquehorror</span>
@@ -91,7 +91,7 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </button>
-                <button class="order-item">
+                <button onclick="queueOrder(this)" class="order-item">
                     <img src="./content/food_04.jpg" alt="">
                     <h5 class="item-name">Ve-Sushi-do da Bárbie</h5>
                     <span class="item-description">Aprovado pelo Aquaman</span>
@@ -108,7 +108,7 @@
         <div class="order-box">
             <h2>Agora, sua bebida</h2>
             <div class="second-order drink-tab">
-                <button class="order-item">
+                <button onclick="queueOrder(this)" class="order-item">
                     <img src="./content/drink_01.jpg" alt="">
                     <h5 class="item-name">Engove frasco 250ml</h5>
                     <span class="item-description">Você vai precisar.. confie</span>
@@ -120,7 +120,7 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </button>
-                <button class="order-item">
+                <button onclick="queueOrder(this)" class="order-item">
                     <img src="./content/drink_02.jpg" alt="">
                     <h5 class="item-name">Coca Cola lata 350ml</h5>
                     <span class="item-description">Tão bom quanto a primeira opção</span>
@@ -132,7 +132,7 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </button>                
-                <button class="order-item">
+                <button onclick="queueOrder(this)" class="order-item">
                     <img src="./content/drink_03.png" alt="">
                     <h5 class="item-name">Dr.Pepper lata 350ml</h5>
                     <span class="item-description egg">El Psy Congroo</span>
@@ -144,7 +144,7 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </button>
-                <button class="order-item">
+                <button onclick="queueOrder(this)" class="order-item">
                     <img src="./content/drink_04.jpg" alt="">
                     <h5 class="item-name">Suco de laranja natural 300ml</h5>
                     <span class="item-description egg">Ai que delícia..</span>
@@ -161,7 +161,7 @@
         <div class="order-box">
             <h2>Por fim, sua sobremesa</h2>
             <div class="third-order">
-                <button class="order-item">
+                <button onclick="queueOrder(this)" class="order-item">
                     <img src="./content/dessert_01.jpg" alt="">
                     <h5 class="item-name">Bolo de casamento "Italiano"</h5>
                     <span class="item-description egg">Mama mia!</span>
@@ -173,7 +173,7 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </button>
-                <button class="order-item">
+                <button onclick="queueOrder(this)" class="order-item">
                     <img src="./content/dessert_02.jpg" alt="">
                     <h5 class="item-name">Churros c/ calda de Chocolate 12u</h5>
                     <span class="item-description">Doce de leite em breve</span>
@@ -185,7 +185,7 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </button>                
-                <button class="order-item">
+                <button onclick="queueOrder(this)" class="order-item">
                     <img src="./content/dessert_03.jpg" alt="">
                     <h5 class="item-name">Creme Brulee 2u</h5>
                     <span class="item-description">Maçaricado na entrega</span>
@@ -197,7 +197,7 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </button>
-                <button class="order-item">
+                <button onclick="queueOrder(this)" class="order-item">
                     <img src="./content/dessert_04.jpg" alt="">
                     <h5 class="item-name">Bolo Crocs</h5>
                     <span class="item-description">Todo o conforto.. no seu estômago!</span>
@@ -213,8 +213,11 @@
         </div>
     </div>
     <div class="bottom-menu">
-        <button class="order-button"><h3 class="order-context">Selecione os 3 itens para fechar o pedido</h3></button>
+        <button disabled onclick="paymentMenu()" class="order-button">
+            <h3 class="order-context">Selecione os 3 itens para fechar o pedido</h3>
+        </button>
     </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="./scripts/scripts.js"></script>
 </body>
 </html>
