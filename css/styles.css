@@ -13,6 +13,10 @@ h1 {
     font-size: 44px;
 }
 
+h2 {
+    margin-bottom: 10px;
+}
+
 h3 {
     color: white;
     font-size: 20px;
@@ -22,9 +26,68 @@ h4 {
     font-size: 18px;
 }
 
+h5 {
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold;
+}
+
+button {
+    background-color: white;
+}
+
+button:active {
+    filter: contrast(80%);
+}
+
+ion-icon {
+    font-size: 22px;
+    color: #32b72f;
+    display: none;
+}
+
+.checkout-menu {
+    display: none;
+    color: white;
+    font-size: 20px;
+    z-index: 1;
+    height: 100vh;
+}
+
+.checkout-menu > div {
+    height: 48%;
+    width: auto;
+    margin: 100px 10px;
+    background-color: #50d074;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.checkout-info {
+    width: 100%;
+    display: flex;
+    padding: 10px 8px;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.checkout-info:last-of-type {
+    font-weight: bold;
+}
+
+.checkout-menu h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
 .top-menu {
     width: 100%;
-    padding: 2% 6%;
+    padding: 10px;
     background-color: #cf2b2b;
     box-sizing: border-box;
     position: fixed;
@@ -34,19 +97,104 @@ h4 {
 
 .content {
     display: flex;
+    height: 80vh;
+    margin-top: 12vh;
+    margin-bottom: 12vh;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.order-box {
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.order-box > div::-webkit-scrollbar {
+    display: none;
+}
+  
+.order-box > div {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.first-order {
+    display: flex;
+    width: auto;
+    overflow-x: scroll;
+}
+
+.second-order {
+    display: flex;
+    width: auto;
+    overflow-x: scroll;
+}
+
+.third-order {
+    display: flex;
+    width: auto;
+    overflow-x: scroll;
+}
+
+.order-item {
+    margin: 10px;
+    padding: 5;
+    max-width: min-content;
+    border: none;
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.first-order {
-    
+.order-item span {
+    padding: 2px 0 2px 2px;
+}
+
+.order-item > div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.order-item .item-description {
+    color: #a6a6a6;
+    font-size: 15px;
+}
+
+.order-item .item-price, .currency-type {
+    font-size: 16px;
+}
+
+.order-item img {
+    height: 75px;
+    width: 150px;
+    margin-top: 5px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.selected {
+    margin: 5px;
+    border: #32b72f 5px solid;
+}
+
+.selected-icon {
+    display: inline;
+}
+
+.drink-tab img {
+    object-fit: contain;
 }
 
 .bottom-menu {
     background-color: white;
     width: 100%;
     display: flex;
-    padding: 4%;
+    padding: 15px;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -55,13 +203,32 @@ h4 {
     box-sizing: border-box;
 }
 
-.bottom-menu > button {
+.order-button {
     background-color: #cbcbcb;
     border: none;
     width: 90%;
-    padding: 2% 8%;
     border-radius: 10% / 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.gui-highlight {
+    padding: 12px 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #50d074;
+    background-color: white;
+}
+
+.cancel-button {
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    color: white;
+    background-color: #50d074;
+}
+
+.egg {
+    font-style: italic;
 }

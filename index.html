@@ -6,37 +6,215 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Document</title>
+    <title>DrivenEats</title>
 </head>
 <body>
+    <div class="checkout-menu">
+        <div>
+            <h3>Confirme seu pedido</h3>
+            <span class="checkout-info">
+                <span class="co-food">-name-</span>
+                <span>
+                    <span>R$ </span>
+                    <span class="co-food-price">-price-</span>
+                </span>
+            </span>
+            <span class="checkout-info">
+                <span class="co-drink">-name-</span>
+                <span>
+                    <span>R$ </span>
+                    <span class="co-drink-price">-price-</span>
+                </span>
+            </span>
+            <span class="checkout-info">
+                <span class="co-dessert">-name-</span>
+                <span>
+                    <span>R$ </span>
+                    <span class="co-dessert-price">-price-</span>
+                </span>
+            </span>
+            <span class="checkout-info">
+                <span>TOTAL:</span>
+                <span>
+                    <span>R$ </span>
+                    <span class="co-total">-price-</span>
+                </span>
+            </span>
+            <button class="order-button gui-highlight">Tudo certo, pode pedir!</button>
+            <button class="cancel-button">Cancelar</button>
+        </div>
+    </div>
     <div class="top-menu">
         <div>
             <h1>DrivenEats</h1>
+
             <h4>Sua comida em 6 minutos</h4>
         </div>
     </div>
     <div class="content">
-        <div class="first-order">
+        <div class="order-box">
             <h2>Primeiro, seu prato</h2>
-            <div class="order-item">
-
-            </div>
+            <div class="first-order">
+                <button class="order-item">
+                    <img src="./content/food_01.jpg" alt="">
+                    <h5 class="item-name">Temaki de Feijão</h5>
+                    <span class="item-description">Aimeudeusquehorror</span>
+                    <div>
+                        <span>
+                            <span class="currency-type">R$</span>
+                            <span class="item-price">19,90</span>
+                        </span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </button>
+                <button class="order-item">
+                    <img src="./content/food_02.jpg" alt="">
+                    <h5 class="item-name">Temaki de Feijão</h5>
+                    <span class="item-description">Aimeudeusquehorror</span>
+                    <div>
+                        <span>
+                            <span class="currency-type">R$</span>
+                            <span class="item-price">14,90</span>    
+                        </span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </button>
+                <button class="order-item">
+                    <img src="./content/food_03.jpg" alt="">
+                    <h5 class="item-name">Pizza de Sushi</h5>
+                    <span class="item-description">Aimeudeusquehorror</span>
+                    <div>
+                        <span>
+                            <span class="currency-type">R$</span>
+                            <span class="item-price">26,90</span>
+                        </span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </button>
+                <button class="order-item">
+                    <img src="./content/food_04.jpg" alt="">
+                    <h5 class="item-name">Ve-Sushi-do da Bárbie</h5>
+                    <span class="item-description">Aprovado pelo Aquaman</span>
+                    <div>
+                        <span>
+                            <span class="currency-type">R$</span>
+                            <span class="item-price">129,90</span>
+                        </span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </button>
+            </div>    
         </div>
-        <div class="second-order">
+        <div class="order-box">
             <h2>Agora, sua bebida</h2>
-            <div class="order-item">
-                
+            <div class="second-order drink-tab">
+                <button class="order-item">
+                    <img src="./content/drink_01.jpg" alt="">
+                    <h5 class="item-name">Engove frasco 250ml</h5>
+                    <span class="item-description">Você vai precisar.. confie</span>
+                    <div>
+                        <span>
+                            <span class="currency-type">R$</span>
+                            <span class="item-price">8,90</span>    
+                        </span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </button>
+                <button class="order-item">
+                    <img src="./content/drink_02.jpg" alt="">
+                    <h5 class="item-name">Coca Cola lata 350ml</h5>
+                    <span class="item-description">Tão bom quanto a primeira opção</span>
+                    <div>
+                        <span>
+                            <span class="currency-type">R$</span>
+                            <span class="item-price">3,50</span>    
+                        </span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </button>                
+                <button class="order-item">
+                    <img src="./content/drink_03.png" alt="">
+                    <h5 class="item-name">Dr.Pepper lata 350ml</h5>
+                    <span class="item-description egg">El Psy Congroo</span>
+                    <div>
+                        <span>
+                            <span class="currency-type">R$</span>
+                            <span class="item-price">3,50</span>    
+                        </span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </button>
+                <button class="order-item">
+                    <img src="./content/drink_04.jpg" alt="">
+                    <h5 class="item-name">Suco de laranja natural 300ml</h5>
+                    <span class="item-description egg">Ai que delícia..</span>
+                    <div>
+                        <span>
+                            <span class="currency-type">R$</span>
+                            <span class="item-price">5,00</span>    
+                        </span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </button>
             </div>
         </div>
-        <div class="third-order">
+        <div class="order-box">
             <h2>Por fim, sua sobremesa</h2>
-            <div class="order-item">
-                
-            </div>
+            <div class="third-order">
+                <button class="order-item">
+                    <img src="./content/dessert_01.jpg" alt="">
+                    <h5 class="item-name">Bolo de casamento "Italiano"</h5>
+                    <span class="item-description egg">Mama mia!</span>
+                    <div>
+                        <span>
+                            <span class="currency-type">R$</span>
+                            <span class="item-price">59,90</span>
+                        </span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </button>
+                <button class="order-item">
+                    <img src="./content/dessert_02.jpg" alt="">
+                    <h5 class="item-name">Churros c/ calda de Chocolate 12u</h5>
+                    <span class="item-description">Doce de leite em breve</span>
+                    <div>
+                        <span>
+                            <span class="currency-type">R$</span>
+                            <span class="item-price">19,90</span>
+                        </span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </button>                
+                <button class="order-item">
+                    <img src="./content/dessert_03.jpg" alt="">
+                    <h5 class="item-name">Creme Brulee 2u</h5>
+                    <span class="item-description">Maçaricado na entrega</span>
+                    <div>
+                        <span>
+                            <span class="currency-type">R$</span>
+                            <span class="item-price">44,90</span>
+                        </span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </button>
+                <button class="order-item">
+                    <img src="./content/dessert_04.jpg" alt="">
+                    <h5 class="item-name">Bolo Crocs</h5>
+                    <span class="item-description">Todo o conforto.. no seu estômago!</span>
+                    <div>
+                        <span>
+                            <span class="currency-type">R$</span>
+                            <span class="item-price">24,90</span>
+                        </span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </button>
+            </div>    
         </div>
     </div>
     <div class="bottom-menu">
-        <button><h3>Selecione os 3 itens para fechar o pedido</h3></button>
+        <button class="order-button"><h3 class="order-context">Selecione os 3 itens para fechar o pedido</h3></button>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </body>
 </html>
