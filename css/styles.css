@@ -259,8 +259,7 @@ ion-icon {
 }
 
 .co-name {
-    overflow: hidden;
-    /* faltam os outros comandos, whitealgumacoisa + 1 */
+    max-width: 50%;
 }
 
 .egg {

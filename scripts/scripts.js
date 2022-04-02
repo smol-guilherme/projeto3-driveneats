@@ -1,5 +1,4 @@
-
-
+let prcTotal;
 
 function queueOrder(btnPress) {
     let orderType = btnPress.parentElement;
@@ -48,7 +47,7 @@ function paymentMenu() {
     const prcTable = document.querySelectorAll(".partial")
     const lstSize = lstOrders.length;
 
-    let prcTotal = 0;
+    prcTotal = 0;
     let itemName;
     let priceStr;
     let priceInt;
@@ -75,14 +74,35 @@ function cancelOrder() {
 }
 
 function requestOrder() {
-    const storeNum = "5555991449791";
-
+    const URL = "https://wa.me/"
+    const STORE_NUM = "5555991449791";
     const frstOrder = document.querySelector(".first-order").querySelector(".selected").querySelector(".item-name").innerHTML
-    const fstPrice = document.querySelector(".first-order").querySelector(".selected").querySelector(".item-price").innerHTML
-
     const scndOrder = document.querySelector(".second-order").querySelector(".selected").querySelector(".item-name").innerHTML
-    const scndPrice = document.querySelector(".second-order").querySelector(".selected").querySelector(".item-price").innerHTML
-
     const thrdOrder = document.querySelector(".third-order").querySelector(".selected").querySelector(".item-name").innerHTML
-    const thrdPrice = document.querySelector(".third-order").querySelector(".selected").querySelector(".item-price").innerHTML
+
+    const txtPrice = prcTotal.toFixed(2).toString().replace(".", ",");
+
+    const info = requestInfo();
+
+    const txtTemplate = `Olá, gostaria de fazer o pedido:\n
+- Prato: ${frstOrder}\n- Bebida: ${scndOrder}\n- Sobremesa: ${thrdOrder}\nTotal: R$ ${txtPrice}
+\nNome: ${info.name}\nEndereço: ${info.address}`
+
+    const encodedTxt = encodeURIComponent(txtTemplate);
+    let uriRequest = `${URL}${STORE_NUM}?text=${encodedTxt}`
+
+    console.log(`${txtTemplate}\n${uriRequest}`)
+
+    window.open(uriRequest)
+}
+
+function requestInfo() {
+    let infoData = {
+        name: null,
+        address: null
+    };
+
+    infoData.name = prompt("Insira o nome do destinatário:");
+    infoData.address = prompt("Insira o endereço de entrega do pedido");
+    return infoData;
 }
