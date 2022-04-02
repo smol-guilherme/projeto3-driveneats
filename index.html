@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,29 +9,30 @@
     <link rel="stylesheet" href="/css/styles.css">
     <title>DrivenEats</title>
 </head>
+
 <body>
     <div class="checkout-menu hidden">
         <div>
             <h3>Confirme seu pedido</h3>
-            <span class="checkout-info">
-                <span class="co-food">-name-</span>
+            <span class="checkout-info partial">
+                <span class="co-name">-name-</span>
                 <span>
                     <span>R$ </span>
-                    <span class="co-food-price">-price-</span>
+                    <span class="co-price">-price-</span>
                 </span>
             </span>
-            <span class="checkout-info">
-                <span class="co-drink">-name-</span>
+            <span class="checkout-info partial">
+                <span class="co-name">-name-</span>
                 <span>
                     <span>R$ </span>
-                    <span class="co-drink-price">-price-</span>
+                    <span class="co-price">-price-</span>
                 </span>
             </span>
-            <span class="checkout-info">
-                <span class="co-dessert">-name-</span>
+            <span class="checkout-info partial">
+                <span class="co-name">-name-</span>
                 <span>
                     <span>R$ </span>
-                    <span class="co-dessert-price">-price-</span>
+                    <span class="co-price">-price-</span>
                 </span>
             </span>
             <span class="checkout-info">
@@ -40,7 +42,7 @@
                     <span class="co-total">-price-</span>
                 </span>
             </span>
-            <button class="gui-highlight">Tudo certo, pode pedir!</button>
+            <button onclick="requestOrder()" class="gui-highlight">Tudo certo, pode pedir!</button>
             <button onclick="cancelOrder()" class="cancel-button">Cancelar</button>
         </div>
     </div>
@@ -74,7 +76,7 @@
                     <div>
                         <span>
                             <span class="currency-type">R$</span>
-                            <span class="item-price">14,90</span>    
+                            <span class="item-price">14,90</span>
                         </span>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
@@ -103,7 +105,7 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </button>
-            </div>    
+            </div>
         </div>
         <div class="order-box">
             <h2>Agora, sua bebida</h2>
@@ -115,7 +117,7 @@
                     <div>
                         <span>
                             <span class="currency-type">R$</span>
-                            <span class="item-price">8,90</span>    
+                            <span class="item-price">8,90</span>
                         </span>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
@@ -127,11 +129,11 @@
                     <div>
                         <span>
                             <span class="currency-type">R$</span>
-                            <span class="item-price">3,50</span>    
+                            <span class="item-price">3,50</span>
                         </span>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
-                </button>                
+                </button>
                 <button onclick="queueOrder(this)" class="order-item">
                     <img src="./content/drink_03.png" alt="">
                     <h5 class="item-name">Dr.Pepper lata 350ml</h5>
@@ -139,7 +141,7 @@
                     <div>
                         <span>
                             <span class="currency-type">R$</span>
-                            <span class="item-price">3,50</span>    
+                            <span class="item-price">3,50</span>
                         </span>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
@@ -151,7 +153,7 @@
                     <div>
                         <span>
                             <span class="currency-type">R$</span>
-                            <span class="item-price">5,00</span>    
+                            <span class="item-price">5,00</span>
                         </span>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
@@ -184,7 +186,7 @@
                         </span>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
-                </button>                
+                </button>
                 <button onclick="queueOrder(this)" class="order-item">
                     <img src="./content/dessert_03.jpg" alt="">
                     <h5 class="item-name">Creme Brulee 2u</h5>
@@ -209,7 +211,7 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </button>
-            </div>    
+            </div>
         </div>
     </div>
     <div class="bottom-menu">

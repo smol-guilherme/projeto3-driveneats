@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;300;400;500;700&display=swap');
 
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #e5e5e5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
 }
 
 h1, h2 {
@@ -42,15 +51,20 @@ button:active {
 
 ion-icon {
     font-size: 22px;
-    color: #32b72f;
-    display: none;
+    color: white;
+    z-index: 0;
 }
 
 .checkout-menu {
+    position: absolute;
+    border-radius: 16px;
+    width: 95%;
+    height: 500px;
     color: white;
     font-size: 20px;
-    z-index: 1;
-    height: 100vh;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px 400px rgba(230, 230, 230, 0.8);
+    z-index: 2;
 }
 
 .hidden {
@@ -58,15 +72,15 @@ ion-icon {
 }
 
 .checkout-menu > div {
-    height: 48%;
+    height: 100%;
     width: auto;
-    margin: 100px 10px;
     background-color: #50d074;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .checkout-info {
@@ -92,10 +106,13 @@ ion-icon {
     width: 100%;
     padding: 10px;
     background-color: #cf2b2b;
+    color: white;
     box-sizing: border-box;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .content {
@@ -107,19 +124,15 @@ ion-icon {
     overflow-y: scroll;
 }
 
+.no-scroll {
+    overflow-y: hidden;
+    scrollbar-width: none;
+}
+
 .order-box {
     margin: 10px 10px;
     display: flex;
     flex-direction: column;
-}
-
-.order-box > div::-webkit-scrollbar {
-    display: none;
-}
-  
-.order-box > div {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 
 .first-order {
@@ -164,6 +177,7 @@ ion-icon {
 
 .order-item .item-description {
     color: #a6a6a6;
+    font-weight: 100;
     font-size: 15px;
 }
 
@@ -183,10 +197,11 @@ ion-icon {
 .selected {
     margin: 5px;
     border: #32b72f 5px solid;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 .selected-icon {
-    display: inline;
+    color: #32b72f;
 }
 
 .drink-tab img {
@@ -204,6 +219,7 @@ ion-icon {
     bottom: 0;
     left: 0;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 .order-button {
@@ -242,6 +258,22 @@ ion-icon {
     background-color: #50d074;
 }
 
+.co-name {
+    overflow: hidden;
+    /* faltam os outros comandos, whitealgumacoisa + 1 */
+}
+
 .egg {
     font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .order-box > div::-webkit-scrollbar {
+        display: none;
+    }
+      
+    .order-box > div {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 }
