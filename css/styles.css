@@ -150,6 +150,7 @@ ion-icon {
 .third-order {
     display: flex;
     width: auto;
+    margin-bottom: 10px;
     overflow-x: scroll;
 }
 
@@ -211,6 +212,7 @@ ion-icon {
 .bottom-menu {
     background-color: white;
     width: 100%;
+    height: 80px;
     display: flex;
     padding: 15px;
     justify-content: center;
@@ -226,6 +228,7 @@ ion-icon {
     background-color: #cbcbcb;
     border: none;
     width: 90%;
+    height: 90%;
     border-radius: 10% / 50%;
     display: flex;
     justify-content: center;
